@@ -1,0 +1,6 @@
+{
+  "name": "رحاب للتسويق والتدريب والاستشارات",
+  "description": "العرض التقديمي الرسمي لبروفايل شركة رحاب للتسويق والتدريب والاستشارات - نبني علامتك، ونطوّر فريقك، ونرشّد قرارك.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

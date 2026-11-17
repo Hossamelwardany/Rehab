@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>رحاب</title><link id="gf" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"><style id="css">:root{--accent:#0F6E56;--dark:#0B3D38;--amber:#F2A44B;--ink:#1F2A2E;--tint:#EEF5F3;--font:'Cairo';box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:var(--font),Arial,sans-serif;line-height:1.7;direction:rtl}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.nav{background:var(--dark);color:#fff}
+.nav .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding-top:20px;padding-bottom:20px}
+.logo{font-size:28px;font-weight:800}
+.links{display:flex;flex-wrap:wrap;gap:24px;font-size:16px}
+.links a:hover{color:var(--amber)}
+.btn{display:inline-block;min-height:44px;padding:10px 28px;border-radius:999px;font-weight:700;font-size:17px;border:2px solid var(--amber);background:var(--amber);color:var(--dark);cursor:pointer;font-family:inherit;text-align:center}
+.btn.ghost{background:transparent;color:#fff;border-color:#8FD1BD}
+.sec{padding:72px 0}
+.bg-light{background:#fff}.bg-tint{background:var(--tint)}.bg-dark{background:var(--dark);color:#fff}
+.sec.sel{outline:3px dashed var(--amber);outline-offset:-3px}
+h1{margin:0 0 18px;font-size:clamp(34px,5vw,54px);line-height:1.3;font-weight:800}
+h2{margin:0 0 12px;font-size:clamp(28px,4vw,40px);font-weight:800;color:var(--dark)}
+.bg-dark h2{color:#fff}
+h3{margin:0 0 10px;font-size:24px}
+.sub{margin:0 0 36px;font-size:19px;opacity:.85}
+.kick{color:#8FD1BD;font-size:20px;font-weight:600;margin-bottom:10px}
+.tag{display:inline-block;background:var(--amber);color:var(--dark);font-weight:700;font-size:15px;padding:2px 16px;border-radius:999px;margin-bottom:12px}
+.hero{display:flex;flex-wrap:wrap;align-items:center;gap:48px}
+.hero>div{flex:1 1 380px}
+.hero p{font-size:20px;color:#CFE8E0;max-width:560px;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.art{position:relative;width:320px;height:320px;margin:0 auto}
+.art i{position:absolute;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:var(--tint);border-radius:16px;padding:28px}
+.bg-tint .card{background:#fff}
+.bg-dark .card{background:rgba(255,255,255,.09)}
+.ic{width:60px;height:60px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.card ul{margin:0;padding-inline-start:20px;font-size:17px}
+.stat{text-align:center}.stat b{display:block;font-size:56px;font-weight:800;color:var(--accent);line-height:1.2}
+.stat span{font-size:18px}
+.num{width:54px;height:54px;border-radius:50%;background:var(--amber);color:var(--dark);font-size:24px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.feat{border:1px solid #C9DDD7;border-radius:16px;padding:24px}
+.feat p,.step p{margin:0;font-size:16px;opacity:.85}
+.logo-box{background:#fff;border-radius:14px;height:100px;display:flex;align-items:center;justify-content:center;font-size:17px;padding:8px;text-align:center}
+.ph{background:#FFF176;color:#1F2A2E;padding:0 8px;border-radius:6px}
+.cts{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
+.cts>div{flex:1 1 340px}
+.cl{font-size:15px;color:#8FD1BD}.cv{font-size:19px;font-weight:700;margin-bottom:12px}
+.foot{background:#072B28;color:#CFE8E0;text-align:center;padding:22px;font-size:15px}
+.body p{font-size:18px;margin:0 0 14px}
+#fab{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));left:16px;z-index:60;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+#ed{position:fixed;top:0;bottom:0;left:0;width:min(400px,100%);z-index:70;background:#fff;color:#1F2A2E;border-right:1px solid #B4B2A9;overflow-y:auto;padding:calc(16px + env(safe-area-inset-top,0px)) 16px 24px;font-size:15px;line-height:1.5;box-shadow:0 0 24px rgba(0,0,0,.25)}
+#ed[hidden]{display:none}
+#ed h3{font-size:20px;color:var(--dark);margin:12px 0}
+#ed h4{margin:16px 0 8px;font-size:16px}
+.fld{margin-bottom:12px}.fld label{display:block;font-weight:600;margin-bottom:4px;font-size:14px}
+.fld input[type=text],.fld textarea,.fld select{width:100%;padding:9px 10px;border:1px solid #888780;border-radius:8px;font:inherit;background:#fff;color:#1F2A2E}
+.fld input[type=color]{width:64px;height:40px;border:1px solid #888780;border-radius:8px;padding:2px}
+.eb{min-height:40px;padding:6px 14px;border-radius:8px;border:1px solid #0F6E56;background:#fff;color:#0F6E56;font:inherit;font-weight:600;cursor:pointer}
+.eb.pri{background:#0F6E56;color:#fff}.eb.dng{border-color:#A32D2D;color:#A32D2D}.eb:disabled{opacity:.5;cursor:default}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.item,.srow{border:1px solid #C9DDD7;border-radius:10px;padding:10px;margin-bottom:10px;background:#F7FAF9}
+.srow b{display:block;margin-bottom:4px}
+.tabs{display:flex;gap:6px;margin-bottom:8px}
+.stat-line{margin-top:12px;font-size:14px;color:#5F5E5A;min-height:20px}
+.lk{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;padding:16px}
+.lkb{background:#fff;color:#1F2A2E;border-radius:14px;padding:22px;width:min(380px,100%);font-size:15px;line-height:1.5}
+.lkb h3{margin:0 0 12px;font-size:20px;color:#0B3D38}
+.fld input[type=password]{width:100%;padding:9px 10px;border:1px solid #888780;border-radius:8px;font:inherit;background:#fff;color:#1F2A2E}
+</style></head><body><div id="site"></div><script type="application/json" id="state">{"brand":{"name":"رحاب","cta":"تواصل معنا","footer":"© 2026 رحاب للتسويق والتدريب والاستشارات","accent":"#0F6E56","dark":"#0B3D38","amber":"#F2A44B","font":"Cairo"},"sections":[{"id":"home","type":"hero","bg":"dark","nav":"","kicker":"رحاب للتسويق والتدريب والاستشارات","title":"نبني علامتك، ونطوّر فريقك، ونرشّد قرارك","text":"تسويق وتدريب واستشارات تحت سقف واحد، بفريق يجمع بين الإبداع والتحليل والتنفيذ المنضبط لنتائج قابلة للقياس.","btn1":"ابدأ مشروعك","btn2":"اعرف خدماتنا"},{"id":"stats","type":"stats","bg":"light","nav":"","items":[{"num":"3","label":"مجالات رئيسية: تسويق وتدريب واستشارات"},{"num":"8","label":"تخصصات داخل فريق العمل"},{"num":"[00]+","label":"عميل نعمل معهم"}]},{"id":"services","type":"cards","bg":"tint","nav":"خدماتنا","tag":"","title":"خدماتنا","sub":"ثلاثة مجالات متكاملة تغطي احتياج الشركة من بناء العلامة إلى تطوير الفريق واتخاذ القرار.","items":[{"icon":"megaphone","title":"التسويق","list":"إدارة السوشيال ميديا\nالحملات الإعلانية المدفوعة\nصناعة المحتوى والتصميم\nالتصوير والمونتاج\nإدارة الحسابات وتقارير الأداء"},{"icon":"cap","title":"التدريب","list":"برامج تدريبية للشركات\nقسم الكورسات والتطوير\nورش عمل في التسويق ومهارات العمل"},{"icon":"bulb","title":"الاستشارات","list":"استشارات إدارية\nاستشارات تسويقية\nدراسات وتقارير السوق"}]},{"id":"courses","type":"cards","bg":"light","nav":"الكورسات والتطوير","tag":"ضمن إدارة التدريب","title":"قسم الكورسات والتطوير","sub":"كورسات عملية وبرامج تطوير تبني مهارات الأفراد والفرق وتقيس أثر التدريب.","items":[{"icon":"cap","title":"الكورسات","list":"دورات التسويق الرقمي والسوشيال ميديا\nدورات مهارات العمل والتواصل\nدورات الإدارة والقيادة\nورش عملية وتطبيقية"},{"icon":"chart","title":"التطوير","list":"تحديد الاحتياج التدريبي لكل جهة\nخطط تطوير للأفراد والفرق\nقياس أثر التدريب والمتابعة\nشهادات حضور وإتمام"}]},{"id":"process","type":"steps","bg":"dark","nav":"كيف نعمل","title":"كيف نعمل","items":[{"title":"نفهم احتياجك","text":"جلسة تعريف وتحديد الأهداف والجمهور."},{"title":"نخطط","text":"استراتيجية وخطة زمنية وميزانية واضحة."},{"title":"ننفذ","text":"إنتاج وتنفيذ بالتزام كامل بالمواعيد."},{"title":"نقيس ونطور","text":"تقارير دورية وتحسين مستمر للنتائج."}]},{"id":"why","type":"features","bg":"light","nav":"","title":"لماذا رحاب","items":[{"title":"فريق متكامل","text":"تسويق وتصميم وتصوير وإعلانات وتدريب واستشارات دون الحاجة لعدة جهات."},{"title":"التزام بالمواعيد","text":"جداول تسليم واضحة ومتابعة مستمرة من مدير الحساب."},{"title":"قرارات مبنية على بيانات","text":"تقارير دورية تقيس النتائج وتحدد خطوات التحسين."},{"title":"سرية كاملة","text":"نحافظ على بيانات العملاء وحساباتهم الإعلانية وخططهم."}]},{"id":"clients","type":"clients","bg":"tint","nav":"عملاؤنا","title":"عملاؤنا وشركاء النجاح","items":[{"name":"[شعار العميل]"},{"name":"[شعار العميل]"},{"name":"[شعار العميل]"},{"name":"[شعار العميل]"},{"name":"[شعار العميل]"},{"name":"[شعار العميل]"}]},{"id":"contact","type":"contact","bg":"dark","nav":"","title":"لنبدأ معًا","text":"احكِ لنا عن مشروعك، وسنرد عليك بخطة واضحة.","btn":"احجز استشارة","items":[{"label":"الهاتف","value":"[رقم الهاتف]"},{"label":"البريد الإلكتروني","value":"[البريد الإلكتروني]"},{"label":"العنوان","value":"[العنوان]"},{"label":"حسابات التواصل","value":"[حساب الشركة]"}]}],"auth":{"salt":"tRR9tcNEZJ6LFE9uzQuGaA==","hash":"+OfQUmCfv5Xk34rf71OdDyc2qipA8yUZiZ/bRRfvE30="}}</script><script id="app">const $=(s,r=document)=>r.querySelector(s);
+const S=JSON.parse($('#state').textContent);
+const ICONS={megaphone:'M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1zM15 9a4 4 0 0 1 0 6M18 6a8 8 0 0 1 0 12',cap:'M2 9l10-5 10 5-10 5-10-5zM6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5',bulb:'M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z',chart:'M4 20V10M10 20V4M16 20v-8M22 20H2',users:'M16 8a3 3 0 1 0-6 0 3 3 0 0 0 6 0zM5 20c0-3 3-5 8-5s8 2 8 5',star:'M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z',check:'M5 12l4 4 10-10'};
+const ICONL={megaphone:'مكبر صوت',cap:'قبعة تخرج',bulb:'لمبة',chart:'رسم بياني',users:'فريق',star:'نجمة',check:'علامة صح'};
+const FONTS={'Cairo':'Cairo','Tajawal':'Tajawal','Almarai':'Almarai','IBM Plex Sans Arabic':'IBM+Plex+Sans+Arabic'};
+const BGL={light:'أبيض',tint:'فاتح مخضر',dark:'داكن'};
+const TYPES={
+hero:{label:'الواجهة الرئيسية',f:[['kicker','الجملة العلوية'],['title','العنوان','area'],['text','الوصف','area'],['btn1','نص الزر الأول'],['btn2','نص الزر الثاني']]},
+stats:{label:'الأرقام',f:[],items:{label:'رقم',f:[['num','الرقم'],['label','الوصف']]}},
+cards:{label:'بطاقات',f:[['tag','شارة صغيرة (اختياري)'],['title','العنوان'],['sub','وصف تحت العنوان','area']],items:{label:'بطاقة',f:[['icon','الأيقونة','icon'],['title','عنوان البطاقة'],['list','البنود (سطر لكل بند)','area']]}},
+steps:{label:'خطوات العمل',f:[['title','العنوان']],items:{label:'خطوة',f:[['title','العنوان'],['text','الوصف','area']]}},
+features:{label:'مميزات',f:[['title','العنوان']],items:{label:'ميزة',f:[['title','العنوان'],['text','الوصف','area']]}},
+clients:{label:'العملاء',f:[['title','العنوان']],items:{label:'عميل',f:[['name','الاسم أو النص']]}},
+text:{label:'نص حر',f:[['title','العنوان'],['body','النص (سطر لكل فقرة)','area']]},
+contact:{label:'التواصل',f:[['title','العنوان'],['text','الوصف','area'],['btn','نص الزر']],items:{label:'بيان تواصل',f:[['label','العنوان'],['value','القيمة']]}}};
+const BLANK={hero:{kicker:'عنوان صغير',title:'عنوان رئيسي',text:'وصف مختصر',btn1:'زر أول',btn2:'زر ثان'},stats:{items:[{num:'0',label:'وصف'}]},cards:{title:'عنوان القسم',sub:'',tag:'',items:[{icon:'star',title:'بطاقة',list:'بند أول\nبند ثان'}]},steps:{title:'عنوان القسم',items:[{title:'خطوة',text:'وصف'}]},features:{title:'عنوان القسم',items:[{title:'ميزة',text:'وصف'}]},clients:{title:'عنوان القسم',items:[{name:'[شعار العميل]'}]},text:{title:'عنوان القسم',body:'اكتب النص هنا'},contact:{title:'تواصل معنا',text:'',btn:'تواصل',items:[{label:'الهاتف',value:'[رقم الهاتف]'}]}};
+let dirty=false,view='list',canEdit=false,art=null,editing=false;
+const clone=o=>JSON.parse(JSON.stringify(o));
+function h(t,a={},...k){const e=document.createElement(t);for(const[x,v]of Object.entries(a)){if(x==='class')e.className=v;else if(x==='style')e.style.cssText=v;else if(x.startsWith('on'))e.addEventListener(x.slice(2),v);else if(v!==false&&v!=null)e.setAttribute(x,v)}for(const c of k.flat())if(c!=null&&c!==false)e.append(c.nodeType?c:document.createTextNode(c));return e}
+function ph(t){return String(t??'').split(/(\[[^\]]*\])/).filter(Boolean).map(p=>/^\[.*\]$/.test(p)?h('span',{class:'ph'},p):p)}
+function ico(n,sz,col){const s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('viewBox','0 0 24 24');s.setAttribute('width',sz);s.setAttribute('height',sz);s.setAttribute('fill','none');s.setAttribute('stroke',col||'#fff');s.setAttribute('stroke-width','1.8');s.setAttribute('stroke-linecap','round');s.setAttribute('stroke-linejoin','round');s.setAttribute('aria-hidden','true');const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',ICONS[n]||ICONS.star);s.append(p);return s}
+const first=t=>S.sections.find(s=>s.type===t);
+function applyTheme(){const r=document.documentElement.style,b=S.brand;r.setProperty('--accent',b.accent);r.setProperty('--dark',b.dark);r.setProperty('--amber',b.amber);r.setProperty('--font',"'"+b.font+"'");let l=$('#gf');if(!l){l=h('link',{id:'gf',rel:'stylesheet'});document.head.append(l)}const u='https://fonts.googleapis.com/css2?family='+(FONTS[b.font]||'Cairo')+':wght@400;600;700;800&display=swap';if(l.getAttribute('href')!==u)l.setAttribute('href',u);document.title=b.name}
+function sec(s){
+const T=s.type,it=s.items||[],el=h('section',{id:s.id,class:'sec bg-'+(s.bg||'light')+(editing&&view===s.id?' sel':'')});
+if(editing)el.addEventListener('click',()=>{if(view!==s.id){view=s.id;drawPanel();render()}});
+const w=h('div',{class:'wrap'});el.append(w);
+const head=()=>[s.tag?h('div',{class:'tag'},s.tag):null,s.title?h('h2',{},ph(s.title)):null,s.sub?h('p',{class:'sub'},ph(s.sub)):null].filter(Boolean);
+if(T==='hero'){const c=first('contact'),cd=first('cards');
+w.append(h('div',{class:'hero'},h('div',{},h('div',{class:'kick'},s.kicker),h('h1',{},s.title),h('p',{},s.text),h('div',{class:'btns'},s.btn1?h('a',{class:'btn',href:c?'#'+c.id:'#'},s.btn1):null,s.btn2?h('a',{class:'btn ghost',href:cd?'#'+cd.id:'#'},s.btn2):null)),
+h('div',{},h('div',{class:'art'},h('i',{style:'top:20px;right:10px;width:290px;height:290px;background:'+S.brand.accent}),h('i',{style:'top:0;left:20px;width:120px;height:120px;background:'+S.brand.amber},ico('megaphone',52,S.brand.dark)),h('i',{style:'bottom:10px;right:0;width:112px;height:112px;background:#8FD1BD'},ico('cap',48,S.brand.dark)),h('i',{style:'bottom:36px;left:36px;width:104px;height:104px;background:#fff'},ico('bulb',44,S.brand.dark))))))}
+else if(T==='stats')w.append(h('div',{class:'grid'},it.map(i=>h('div',{class:'stat'},h('b',{},ph(i.num)),h('span',{},ph(i.label))))));
+else if(T==='cards')w.append(...head(),h('div',{class:'grid'},it.map(i=>h('div',{class:'card'},h('div',{class:'ic'},ico(i.icon,28)),h('h3',{},i.title),h('ul',{},String(i.list||'').split('\n').filter(x=>x.trim()).map(x=>h('li',{},ph(x))))))));
+else if(T==='steps')w.append(...head(),h('div',{class:'grid'},it.map((i,k)=>h('div',{class:'step'},h('div',{class:'num'},String(k+1)),h('h3',{},i.title),h('p',{},ph(i.text))))));
+else if(T==='features')w.append(...head(),h('div',{class:'grid'},it.map(i=>h('div',{class:'feat'},h('h3',{style:'font-size:21px'},i.title),h('p',{},ph(i.text))))));
+else if(T==='clients')w.append(...head(),h('div',{class:'grid',style:'grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px'},it.map(i=>h('div',{class:'logo-box',style:'color:#1F2A2E'},ph(i.name)))));
+else if(T==='text')w.append(...head(),h('div',{class:'body'},String(s.body||'').split('\n').filter(x=>x.trim()).map(x=>h('p',{},ph(x)))));
+else if(T==='contact')w.append(h('div',{class:'cts'},h('div',{},h('h2',{},s.title),h('p',{class:'sub'},ph(s.text)),s.btn?h('a',{class:'btn',href:'#'+s.id},s.btn):null),h('div',{},it.map(i=>h('div',{},h('div',{class:'cl'},i.label),h('div',{class:'cv'},ph(i.value)))))));
+return el}
+function render(){applyTheme();const c=first('contact');
+const nav=h('header',{class:'nav'},h('div',{class:'wrap'},h('div',{class:'logo'},S.brand.name),h('nav',{class:'links'},S.sections.filter(s=>s.nav).map(s=>h('a',{href:'#'+s.id},s.nav))),S.brand.cta?h('a',{class:'btn',href:c?'#'+c.id:'#'},S.brand.cta):null));
+$('#site').replaceChildren(nav,...S.sections.map(sec),h('footer',{class:'foot'},S.brand.footer))}
+/* ---------- editor ---------- */
+const mv=(a,i,d)=>{const j=i+d;if(j<0||j>=a.length)return;[a[i],a[j]]=[a[j],a[i]]};
+function change(){dirty=true;render();upSave()}
+function btn(t,fn,c=''){return h('button',{class:'eb '+c,type:'button',onclick:fn},t)}
+function danger(t,fn){let armed=false,b;b=btn(t,()=>{if(!armed){armed=true;b.textContent='اضغط للتأكيد';setTimeout(()=>{armed=false;b.textContent=t},3000)}else fn()},'dng');return b}
+function field(o,k,label,kind){const id='f'+Math.random().toString(36).slice(2,8);let i;
+if(kind==='area')i=h('textarea',{rows:3,id});
+else if(kind==='icon'||kind==='bg'||kind==='font'){i=h('select',{id});const L=kind==='icon'?ICONL:kind==='bg'?BGL:Object.fromEntries(Object.keys(FONTS).map(x=>[x,x]));for(const[v,t]of Object.entries(L))i.append(h('option',{value:v},t))}
+else if(kind==='color')i=h('input',{type:'color',id});else i=h('input',{type:'text',id});
+i.value=o[k]??'';i.addEventListener('input',()=>{o[k]=i.value;change()});
+return h('div',{class:'fld'},h('label',{for:id},label),i)}
+function listView(){const b=h('div',{});b.append(h('h3',{},'أقسام الصفحة'));
+S.sections.forEach((s,i)=>b.append(h('div',{class:'srow'},h('b',{},TYPES[s.type].label+' - '+(s.title||s.nav||s.kicker||'بدون عنوان')),h('div',{class:'row'},btn('تعديل',()=>{view=s.id;drawPanel();render()},'pri'),btn('▲',()=>{mv(S.sections,i,-1);change();drawPanel()}),btn('▼',()=>{mv(S.sections,i,1);change();drawPanel()}),danger('حذف',()=>{S.sections.splice(i,1);change();drawPanel()})))));
+const sel=h('select',{id:'newt',style:'width:100%;padding:9px;border:1px solid #888780;border-radius:8px;font:inherit;margin:8px 0'});for(const[k,v]of Object.entries(TYPES))sel.append(h('option',{value:k},v.label));
+b.append(h('h4',{},'إضافة قسم جديد'),sel,btn('+ إضافة القسم',()=>{const t=sel.value,s=Object.assign({id:'s'+Date.now(),type:t,bg:'light',nav:''},clone(BLANK[t]));S.sections.push(s);view=s.id;change();drawPanel();document.getElementById(s.id)?.scrollIntoView({behavior:'smooth'})},'pri'));return b}
+function secView(s){const T=TYPES[s.type],b=h('div',{});b.append(btn('← رجوع للأقسام',()=>{view='list';drawPanel();render()}),h('h3',{},T.label));
+[['nav','الاسم في القائمة (فارغ = مخفي)'],...T.f,['bg','لون الخلفية','bg']].forEach(f=>b.append(field(s,f[0],f[1],f[2])));
+if(T.items){b.append(h('h4',{},'العناصر'));s.items.forEach((it,i)=>{const c=h('div',{class:'item'});T.items.f.forEach(f=>c.append(field(it,f[0],f[1],f[2])));c.append(h('div',{class:'row'},btn('▲',()=>{mv(s.items,i,-1);change();drawPanel()}),btn('▼',()=>{mv(s.items,i,1);change();drawPanel()}),danger('حذف',()=>{s.items.splice(i,1);change();drawPanel()})));b.append(c)});
+b.append(btn('+ إضافة '+T.items.label,()=>{const n={};T.items.f.forEach(f=>n[f[0]]=f[2]==='icon'?'star':'');s.items.push(n);change();drawPanel()},'pri'))}
+return b}
+function setView(){const b=h('div',{});b.append(h('h3',{},'إعدادات الصفحة'));
+[['name','اسم الشركة'],['cta','نص زر القائمة'],['footer','نص الفوتر'],['accent','اللون الأساسي','color'],['dark','اللون الداكن','color'],['amber','لون التمييز','color'],['font','الخط','font']].forEach(f=>b.append(field(S.brand,f[0],f[1],f[2])));b.append(pwBox());return b}
+function upSave(){const b=$('#sv');if(b)b.disabled=!dirty}
+function setStat(t){const s=$('#st');if(s)s.textContent=t}
+async function save(){setStat('جارٍ الحفظ والنشر...');try{await art.publish(buildDoc());dirty=false;upSave();setStat('تم الحفظ. تُحدَّث الصفحة لكل من يفتحها.')}catch(e){setStat(e&&e.code==='conflict'?'تم تعديل الصفحة من مكان آخر، أعد فتحها وكرر التعديل.':'تعذر الحفظ، تأكد أن لديك صلاحية التعديل.')}}
+function drawPanel(){const p=$('#ed');if(!p)return;const tabs=h('div',{class:'tabs'},btn('الأقسام',()=>{view='list';drawPanel();render()},view!=='settings'?'pri':''),btn('الإعدادات',()=>{view='settings';drawPanel();render()},view==='settings'?'pri':''),btn('إغلاق',()=>{p.hidden=true;editing=false;view='list';render()}));
+const body=view==='settings'?setView():view==='list'?listView():(()=>{const s=S.sections.find(x=>x.id===view);return s?secView(s):listView()})();
+p.replaceChildren(tabs,body,h('div',{class:'stat-line',id:'st'}),h('div',{style:'position:sticky;bottom:0;background:#fff;padding:10px 0'},h('button',{class:'eb pri',id:'sv',type:'button',onclick:save,disabled:!dirty,style:'width:100%'},'حفظ ونشر التعديلات')))}
+let unlocked=false,fails=0,until=0;
+function b64(u){return btoa(String.fromCharCode(...new Uint8Array(u)))}
+async function hashPw(pw,salt){const k=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF2',false,['deriveBits']);const bits=await crypto.subtle.deriveBits({name:'PBKDF2',salt:Uint8Array.from(atob(salt),c=>c.charCodeAt(0)),iterations:150000,hash:'SHA-256'},k,256);return b64(bits)}
+function openEd(){const p=$('#ed');p.hidden=false;editing=true;drawPanel();render()}
+function toggleEd(){const p=$('#ed');if(!p.hidden){p.hidden=true;editing=false;view='list';render();return}if(S.auth&&!unlocked)askPw(openEd);else openEd()}
+function askPw(ok){const m=h('div',{class:'lk'}),i=h('input',{type:'password',id:'pw',autocomplete:'current-password'}),msg=h('div',{class:'stat-line'});const close=()=>m.remove();
+const go=async()=>{if(Date.now()<until){msg.textContent='انتظر قليلًا قبل المحاولة التالية.';return}let good=false;try{good=(await hashPw(i.value,S.auth.salt))===S.auth.hash}catch(e){}
+if(good){unlocked=true;fails=0;close();ok()}else{fails++;if(fails>=3)until=Date.now()+Math.min(60000,5000*fails);msg.textContent='الباسورد غير صحيح.';i.value='';i.focus()}};
+i.addEventListener('keydown',e=>{if(e.key==='Enter')go()});
+m.append(h('div',{class:'lkb',role:'dialog','aria-label':'باسورد التعديل'},h('h3',{},'باسورد التعديل'),h('div',{class:'fld'},h('label',{for:'pw'},'أدخل الباسورد لفتح وضع التعديل'),i),msg,h('div',{class:'row'},btn('فتح',go,'pri'),btn('إلغاء',close))));document.body.append(m);i.focus()}
+function pwBox(){const d=h('div',{class:'item'}),a=h('input',{type:'password',id:'np1',autocomplete:'new-password'}),c=h('input',{type:'password',id:'np2',autocomplete:'new-password'}),m=h('div',{class:'stat-line'});
+d.append(h('h4',{},'حماية التعديل بباسورد'),h('div',{class:'stat-line'},S.auth?'الحماية مفعّلة.':'لم يتم تعيين باسورد بعد.'),h('div',{class:'fld'},h('label',{for:'np1'},S.auth?'باسورد جديد (6 أحرف على الأقل)':'الباسورد (6 أحرف على الأقل)'),a),h('div',{class:'fld'},h('label',{for:'np2'},'أعد كتابة الباسورد'),c),m);
+d.append(h('div',{class:'row'},btn(S.auth?'تغيير الباسورد':'تفعيل الباسورد',async()=>{if(a.value.length<6){m.textContent='الباسورد أقصر من 6 أحرف.';return}if(a.value!==c.value){m.textContent='الباسوردان غير متطابقين.';return}try{const salt=b64(crypto.getRandomValues(new Uint8Array(16)));S.auth={salt,hash:await hashPw(a.value,salt)}}catch(e){m.textContent='هذا المتصفح لا يدعم تشفير الباسورد.';return}unlocked=true;change();drawPanel();setStat('تم تعيين الباسورد. اضغط حفظ ونشر لتطبيقه.')},'pri'),S.auth?danger('إزالة الباسورد',()=>{delete S.auth;change();drawPanel()}):null));return d}
+function mountEditor(){document.body.append(h('div',{id:'ed',hidden:true}),h('button',{id:'fab',class:'btn',type:'button',onclick:toggleEd},'تعديل الصفحة'))}
+function buildDoc(){const css=$('#css').textContent,app=$('#app').textContent,j=JSON.stringify(S).replace(/</g,'\\u003c'),esc=t=>String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+return '<!doctype html>\n<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>'+esc(S.brand.name)+'</title><link id="gf" rel="stylesheet" href="https://fonts.googleapis.com/css2?family='+(FONTS[S.brand.font]||'Cairo')+':wght@400;600;700;800&display=swap"><style id="css">'+css+'</style></head><body><div id="site"></div><script type="application/json" id="state">'+j+'<\/script><script id="app">'+app+'<\/script></body></html>'}
+render();
+(async()=>{try{if(!window.claude)return;const u=await claude.use('user');canEdit=!!(u&&(u.isOwner()||u.canEdit()));if(!canEdit)return;art=await claude.use('artifact');if(art)mountEditor()}catch(e){}})();
+</script></body></html>

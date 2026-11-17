@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Cairo', system-ui, -apple-system, sans-serif;
+    --font-body: 'IBM Plex Sans Arabic', 'Cairo', system-ui, sans-serif;
+    --brand-dark: #0B3D38;
+    --brand-deep: #062623;
+    --brand-accent: #0F6E56;
+    --brand-gold: #E5A93B;
+    --brand-amber: #F2A44B;
+    --brand-tint: #EEF5F3;
+    --brand-ink: #1A2726;
+  }
+
+  html {
+    font-family: var(--font-body);
+    direction: rtl;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Custom subtle architectural grid texture */
+.bg-architectural-grid {
+  background-image:
+    linear-gradient(to left, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-architectural-grid-light {
+  background-image:
+    linear-gradient(to left, rgba(11, 61, 56, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 61, 56, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Print / PDF Export Layout: renders all 10 slides cleanly one per landscape page */
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+
+  body {
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only-deck {
+    display: block !important;
+  }
+
+  .print-slide-page {
+    width: 100vw;
+    height: 100vh;
+    page-break-after: always;
+    break-after: page;
+    overflow: hidden;
+  }
+
+  .print-slide-page:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+}
